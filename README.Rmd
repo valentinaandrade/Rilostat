@@ -84,3 +84,23 @@ https://www.ilo.org/global/copyright
 https://www.ilo.org/global/copyright/request-for-permission
 
 
+## Example
+
+ILOSTAT users who want to use Rilostat should perform the following steps
+
+1. Install the Rilostat package
+
+```{r}
+install_github("ilostat/Rilostat")
+```
+ 
+2. Go to [ILOSTAT](https://ilostat.ilo.org/), look for the variables or dataset you want to import 
+
+3. In the information of the variable or dataset the **id** is indicated, this must be entered as an argument to the function. 
+
+```{r}
+Rilostat::get_ilostat(id= "IFL_XIEM_SEX_ECO_IFL_RT_A")
+```
+
+4. You can filter by more package conditions like segment and time_format. See ?get_ilostat
+
